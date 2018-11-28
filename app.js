@@ -1,20 +1,21 @@
-const express        = require("express");
-const session        = require("express-session");
-const MongoStore     = require("connect-mongo")(session);
+const express = require("express");
+const session = require("express-session");
+const MongoStore = require("connect-mongo")(session);
 const expressLayouts = require("express-ejs-layouts");
-const path           = require("path");
-const logger         = require("morgan");
-const cookieParser   = require("cookie-parser");
-const bodyParser     = require("body-parser");
-const mongoose       = require("mongoose");
-const app            = express();
+const path = require("path");
+const logger = require("morgan");
+const cookieParser = require("cookie-parser");
+const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+const app = express();
 
 // Controllers
-const siteController     = require("./routes/siteController");
+const siteController = require("./routes/siteController");
 const locationController = require("./routes/locationController");
 
 // Mongoose configuration
-mongoose.connect("mongodb://localhost/deploy-exercise");
+mongoose.connect("mongodb:mefitdev:30Seconds@ds149382.mlab.com:49382/users-passport");
+
 
 // Middlewares configuration
 app.use(logger("dev"));
