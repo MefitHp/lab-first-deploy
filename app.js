@@ -16,7 +16,7 @@ const siteController = require("./routes/siteController");
 const locationController = require("./routes/locationController");
 
 // Mongoose configuration
-mongoose.connect("mongodb:mefitdev:30Seconds@ds149382.mlab.com:49382/users-passport");
+mongoose.connect("mongodb://mefitdev:30Seconds@ds149382.mlab.com:49382/users-passport");
 
 
 // Middlewares configuration
